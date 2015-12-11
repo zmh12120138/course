@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Quality course network</title>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+<div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" >Quality Course</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">index</a></li>
+                <li><a href="/login">login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>Latest update </thead>
+            <tbody>
+                  <tr>
+                      <td>course name</td>
+                      <td>teacher</td>
+                      <td>update time</td>
+                  </tr>
+                  <% for(var i= 0;i<videoAll.length;i++){ %>
+                    <tr>
+                        <td><a href="http://122.0.72.205:3000/course/<%=videoAll[i].courseName%>"><%=videoAll[i].courseName %></a> </td>
+                        <td><%=videoAll[i].teacherName %></td>
+                        <td><%=videoAll[i].updateTime.toLocaleDateString() %></td>
+                    </tr>
+                   <%}%>
+            </tbody>
+        </table>
+    </div>
+    <div style="margin-top: 20px;padding-top: 20px;border-top: 1px solid #EEEEEE">
+        <p>&copy; 2015 Minghui Zhao</p>
+    </div>
+</div>
+  </body>
+</html>
